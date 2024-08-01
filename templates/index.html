@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>문학 작품 생성기</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>문학 작품 생성기</h1>
+    <form action="/generate" method="post">
+        <label for="topic">주제 입력:</label>
+        <input type="text" id="topic" name="topic" required><br>
+
+        <label for="genre">장르 선택:</label>
+        <select id="genre" name="genre">
+            <option value="Fantasy">판타지</option>
+            <option value="Horror">공포</option>
+            <option value="Romance">로맨스</option>
+            <option value="Adventure">모험</option>
+        </select><br>
+
+        <label for="length">이야기 길이:</label>
+        <select id="length" name="length">
+            <option value="Short">짧은 이야기</option>
+            <option value="Medium">중간 이야기</option>
+            <option value="Long">긴 이야기</option>
+        </select><br>
+
+        <label for="character">캐릭터 이름 (선택 사항):</label>
+        <input type="text" id="character" name="character"><br>
+
+        <input type="submit" value="생성">
+    </form>
+</body>
+</html>

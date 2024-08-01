@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ story.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>{{ story.title }}</h1>
+    <p>{{ story.content }}</p>
+    <a href="{{ url_for('dashboard') }}">뒤로 가기</a>
+</body>
+</html>
